@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimum Number using Rest operator</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+            margin: 200px;
+        }
+        div {
+            background:rgb(221, 192, 172);
+            width:10rem;
+           margin-left: 340px;
+           padding:10px;
+           border-radius: 20px;
+        }
 
+        div:hover {
+    background-color: crimson;
+    color: white;
+    font-size: 5rem;
+    border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h4> Print the Minimum number from an array using rest operator</h4>
+    <div></div>
+    <script>
+function min(...f) {
+    var f_ref = f;
+    var x_ref = f.length;
+    minimum = f_ref[x_ref - 1];
+    while (x_ref--){
+        if(f_ref[x_ref] < minimum){
+            minimum= f_ref[x_ref];
+        }
+    }
+            return minimum;
+}
+document.querySelector("div").innerText = min(5, 2, 3, 4, 5, 6, 7, 8, 10);
+
+
+
+
+</script>
+    
+</body>
+</html>
